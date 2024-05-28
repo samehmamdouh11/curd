@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/all.min.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+
+  <title></title>
+</head>
+
+<body>
+  <div class="w-75 m-auto shadow p-5 my-5">
+    <h1 class="text-center fw-bolder">CRUD SYSTEM</h1>
+    <label for="nameInput">productName:</label>
+    <input type="text" onclick="valids()" name="product_name" class="form-control mb-3" id="nameInput" />
+    <p class="text-center text-success d-none" id="correct">start with capital</p>
+    <label for="priceInput">productPrice:</label>
+    <input type="number" name="product_price" class="form-control mb-3" id="priceInput" />
+    <label for="categoryInput">productCategory:</label>
+    <input type="text" name="product_Category" class="form-control mb-3" id="categoryInput" />
+    <label for="descInput">productDiscreption:</label>
+    <textarea name="product_desc" class="form-control mb-3" id="descInput"></textarea>
+    <button class="btn btn-primary d-flex" id="sameh2" onclick="create()">AddProduct</button>
+    <button class="btn btn-primary  d-none" id="sameh" onclick="set()">updete</button>
+    <button class="btn btn-danger">Reset</button>
+  </div>
+  <input type="text" onkeyup="search2()" class="form-control w-50 m-auto" id="searchInput" placeholder="search..." />
+  <div class="table-responsive w-75 m-auto my-5">
+    <table class="table">
+      <thead>
+        <th>index</th>
+        <th>product Name</th>
+        <th>product Price</th>
+        <th>product Category</th>
+        <th>product Discreption</th>
+        <th>Update</th>
+        <th>Delete</th>
+      </thead>
+      <tbody id="tableBody">
+
+      </tbody>
+    </table>
+  </div>
+
+  <!-- <script src="./js/string.js"></script> -->
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
